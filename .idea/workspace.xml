@@ -5,12 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3de976a8-4746-4ff3-b505-bb00a99187c2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/users-ms/src/main/java/org/sibokdev/springcloud/ms/users/controllers/UserController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/users-ms/src/main/java/org/sibokdev/springcloud/ms/users/repositories/UserRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/users-ms/src/main/java/org/sibokdev/springcloud/ms/users/services/UserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/users-ms/src/main/java/org/sibokdev/springcloud/ms/users/services/UserServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users-ms/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/users-ms/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
