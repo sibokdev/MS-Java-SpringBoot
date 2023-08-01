@@ -5,10 +5,11 @@ import org.sibokdev.springcloud.ms.users.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
-import java.util.Optional;
+import javax.validation.Valid;
+import java.util.*;
 
 @RestController
 public class UserController {
@@ -32,15 +33,29 @@ public class UserController {
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
-    public User save(@RequestBody User user){
-        return userService.save(user);
+    public ResponseEntity<?> save(@Valid @RequestBody User user, BindingResult result){
+        if (user.getEmail().isEmpty() && userService.byEmail(user.getEmail()).isPresent()){
+            return ResponseEntity.badRequest().body(Collections.singletonMap("Message", "An user with the email already exists"));
+        }
+        if (result.hasErrors()) {
+            return validate(result);
+        }
+        return ResponseEntity.status(HttpStatus.CREATED).body(userService.save(user));
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<?> update (@RequestBody User user, @PathVariable Long id){
+    public ResponseEntity<?> update (@Valid @RequestBody User user, @PathVariable Long id, BindingResult result){
+        if (result.hasErrors()) {
+            return validate(result);
+        }
         Optional<User> userOptional = userService.getById(id);
         if (userOptional.isPresent()) {
             User userFound = userOptional.get();
+
+            if (!user.getEmail().equalsIgnoreCase(userFound.getEmail()) && userService.byEmail(user.getEmail()).isPresent()){
+                return ResponseEntity.badRequest().body(Collections.singletonMap("Message", "An user with the email already exists"));
+            }
+
             user.setEmail(user.getEmail());
             user.setName(user.getName());
             user.setPassword(user.getPassword());
@@ -61,5 +76,12 @@ public class UserController {
             return ResponseEntity.notFound().build();
         }
 
+    }
+    private static ResponseEntity<Map<String, String>> validate(BindingResult result) {
+        Map<String, String> errors =new HashMap<String,String>();
+        result.getFieldErrors().forEach(err -> {
+            errors.put(err.getField().toString(), "Field: " +err.getField() + " "+err.getDefaultMessage());
+        });
+        return ResponseEntity.badRequest().body(errors);
     }
 }
