@@ -5,17 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3de976a8-4746-4ff3-b505-bb00a99187c2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/courses-ms/src/main/java/org/sibokdev/springcloud/ms/courses/coursesms/integration/clients/UserClientRest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/courses-ms/src/main/java/org/sibokdev/springcloud/ms/courses/coursesms/models/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/courses-ms/src/main/java/org/sibokdev/springcloud/ms/courses/coursesms/models/entity/CourseUser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/users-ms/src/main/java/org/sibokdev/springcloud/ms/users/integration/clients/CourseClientRest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/courses-ms/src/main/java/org/sibokdev/springcloud/ms/courses/coursesms/CoursesMsApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/courses-ms/src/main/java/org/sibokdev/springcloud/ms/courses/coursesms/CoursesMsApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/courses-ms/src/main/java/org/sibokdev/springcloud/ms/courses/coursesms/controllers/CourseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/courses-ms/src/main/java/org/sibokdev/springcloud/ms/courses/coursesms/controllers/CourseController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/courses-ms/src/main/java/org/sibokdev/springcloud/ms/courses/coursesms/models/entity/Course.java" beforeDir="false" afterPath="$PROJECT_DIR$/courses-ms/src/main/java/org/sibokdev/springcloud/ms/courses/coursesms/models/entity/Course.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/courses-ms/src/main/java/org/sibokdev/springcloud/ms/courses/coursesms/repositories/CourseRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/courses-ms/src/main/java/org/sibokdev/springcloud/ms/courses/coursesms/repositories/CourseRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/courses-ms/src/main/java/org/sibokdev/springcloud/ms/courses/coursesms/services/CourseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/courses-ms/src/main/java/org/sibokdev/springcloud/ms/courses/coursesms/services/CourseService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/courses-ms/src/main/java/org/sibokdev/springcloud/ms/courses/coursesms/services/CourseServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/courses-ms/src/main/java/org/sibokdev/springcloud/ms/courses/coursesms/services/CourseServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users-ms/src/main/java/org/sibokdev/springcloud/ms/users/UsersMsApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/users-ms/src/main/java/org/sibokdev/springcloud/ms/users/UsersMsApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users-ms/src/main/java/org/sibokdev/springcloud/ms/users/controllers/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/users-ms/src/main/java/org/sibokdev/springcloud/ms/users/controllers/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users-ms/src/main/java/org/sibokdev/springcloud/ms/users/services/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/users-ms/src/main/java/org/sibokdev/springcloud/ms/users/services/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users-ms/src/main/java/org/sibokdev/springcloud/ms/users/services/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/users-ms/src/main/java/org/sibokdev/springcloud/ms/users/services/UserServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

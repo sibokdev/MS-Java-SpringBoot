@@ -12,4 +12,5 @@ public interface UserService {
     void delete(Long id);
 
     Optional<User> byEmail(String email);
+    List<User> findAllById(Iterable<Long> ids);
 }
