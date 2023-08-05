@@ -79,6 +79,7 @@ public class UserController {
     }
     @GetMapping("/users-by-course")
     public ResponseEntity<?> getUsersByCourse(@RequestParam List<Long> ids){
+        // test to fire compile with docker
         return ResponseEntity.ok(userService.findAllById(ids));
     }
     private static ResponseEntity<Map<String, String>> validate(BindingResult result) {
