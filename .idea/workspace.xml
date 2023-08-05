@@ -5,14 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3de976a8-4746-4ff3-b505-bb00a99187c2" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/users-ms/src/main/java/org/sibokdev/springcloud/ms/users/integration/clients/CourseClientRest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/courses-ms/src/main/java/org/sibokdev/springcloud/ms/courses/coursesms/controllers/CourseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/courses-ms/src/main/java/org/sibokdev/springcloud/ms/courses/coursesms/controllers/CourseController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/courses-ms/src/main/java/org/sibokdev/springcloud/ms/courses/coursesms/models/entity/Course.java" beforeDir="false" afterPath="$PROJECT_DIR$/courses-ms/src/main/java/org/sibokdev/springcloud/ms/courses/coursesms/models/entity/Course.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users-ms/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/users-ms/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/users-ms/src/main/java/org/sibokdev/springcloud/ms/users/controllers/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/users-ms/src/main/java/org/sibokdev/springcloud/ms/users/controllers/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users-ms/src/main/java/org/sibokdev/springcloud/ms/users/models/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/users-ms/src/main/java/org/sibokdev/springcloud/ms/users/models/entity/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users-ms/src/main/java/org/sibokdev/springcloud/ms/users/repositories/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/users-ms/src/main/java/org/sibokdev/springcloud/ms/users/repositories/UserRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/users-ms/src/main/java/org/sibokdev/springcloud/ms/users/services/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/users-ms/src/main/java/org/sibokdev/springcloud/ms/users/services/UserService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/users-ms/src/main/java/org/sibokdev/springcloud/ms/users/services/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/users-ms/src/main/java/org/sibokdev/springcloud/ms/users/services/UserServiceImpl.java" afterDir="false" />
     </list>
@@ -24,8 +19,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -53,6 +48,11 @@
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="org.sibokdev.springcloud.ms.courses.coursesms.models" />
+    </key>
+  </component>
   <component name="RunManager" selected="Application.CoursesMsApplication">
     <configuration name="CoursesMsApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.sibokdev.springcloud.ms.courses.coursesms.CoursesMsApplication" />

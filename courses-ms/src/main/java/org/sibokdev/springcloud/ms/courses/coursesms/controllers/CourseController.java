@@ -1,5 +1,7 @@
 package org.sibokdev.springcloud.ms.courses.coursesms.controllers;
 
+import feign.FeignException;
+import org.sibokdev.springcloud.ms.courses.coursesms.models.User;
 import org.sibokdev.springcloud.ms.courses.coursesms.models.entity.Course;
 import org.sibokdev.springcloud.ms.courses.coursesms.services.CourseService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,10 +10,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.Optional;
+import java.util.*;
 
 @RestController
 public class CourseController {
@@ -75,6 +74,55 @@ public class CourseController {
             errors.put(err.getField().toString(), "Field: " +err.getField() + " "+err.getDefaultMessage());
         });
         return ResponseEntity.badRequest().body(errors);
+    }
+
+    @PutMapping("/assign-user/{courseId}")
+    public ResponseEntity<?> assignUser(@RequestBody User user, @PathVariable Long courseId){
+        Optional<User> o;
+        try {
+            o = courseService.assignUser(user, courseId);
+        } catch (FeignException e) {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(Collections.singletonMap("mensaje", "No existe el usuario por el id o error de comunicacion"));
+        }
+        if (o.isPresent()) {
+            return ResponseEntity.status(HttpStatus.CREATED).body(o.get());
+        }
+        return ResponseEntity.noContent().build();
+    }
+
+    @PostMapping("/create-user/{courseId}")
+    public ResponseEntity<?> createUser(@RequestBody User user,@PathVariable Long courseId){
+        Optional<User> o;
+        try {
+            o = courseService.createUser(user, courseId);
+        } catch (FeignException e) {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(Collections.singletonMap("mensaje", "No existe el usuario por el id o error de comunicacion"));
+        }
+        if (o.isPresent()) {
+            return ResponseEntity.status(HttpStatus.CREATED).body(o.get());
+        }
+        return ResponseEntity.noContent().build();
+    }
+
+    @DeleteMapping("/delete-user/{courseId}")
+    public ResponseEntity<?> deleteUser(@RequestBody User user,@PathVariable Long courseId){
+
+        Optional<User> o;
+        try {
+            o = courseService.deleteUser(user, courseId);
+        } catch (FeignException e) {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(Collections.singletonMap("mensaje", "No se pudo crear el usuario por el id o error de comunicacion"));
+        }
+        if (o.isPresent()) {
+            return ResponseEntity.status(HttpStatus.OK).body(o.get());
+        }
+        return ResponseEntity.noContent().build();
+    }
+
+    @DeleteMapping("/delete-course-user/{id}")
+    public ResponseEntity<?> deleteCourseUser(@PathVariable Long id){
+        courseService.deleteCourseUserById(id);
+        return ResponseEntity.noContent().build();
     }
 }
 
