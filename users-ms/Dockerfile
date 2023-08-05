@@ -28,4 +28,7 @@ COPY --from=builder /app/users-ms/target/users-ms-0.0.1-SNAPSHOT.jar .
 EXPOSE 8001
 
 ## entry point now is pointing to container folder with the compile
-ENTRYPOINT ["java", "-jar", "./target/users-ms-0.0.1-SNAPSHOT.jar"]
+##ENTRYPOINT ["java", "-jar", "./target/users-ms-0.0.1-SNAPSHOT.jar"]
+
+## if entering in interagtive mode need to use cmd instead of entrypoint
+CMD ["java", "-jar", "./target/users-ms-0.0.1-SNAPSHOT.jar"]
