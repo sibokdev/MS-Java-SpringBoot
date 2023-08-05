@@ -6,4 +6,4 @@ COPY ./target/users-ms-0.0.1-SNAPSHOT.jar .
 
 EXPOSE 8001
 
-ENTRYPOINT ["java", "-jar", "./target/users-ms-0.0.1-SNAPSHOT.jar"]
+ENTRYPOINT ["java", "-jar", "users-ms-0.0.1-SNAPSHOT.jar"]
