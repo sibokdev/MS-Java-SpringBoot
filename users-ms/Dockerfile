@@ -1,4 +1,4 @@
-FROM openjdk:11.0-jdk
+FROM openjdk:11.0-jdk as builder
 
 ## changing app folder on docker to compile
 ## we going to buil the project from the parent folder
@@ -18,6 +18,12 @@ RUN ./mvnw clean package -Dmaven.test.skip -Dmaven.main.skip -Dspring-boot.repac
 COPY ./users-ms/src ./src
 
 RUN ./mvnw clean package -DskipTests
+
+FROM openjdk:11.0-jdk
+
+WORKDIR /app
+
+COPY --from=builder /app/users-ms/target/users-ms-0.0.1-SNAPSHOT.jar .
 
 EXPOSE 8001
 
