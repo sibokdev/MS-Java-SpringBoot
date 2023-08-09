@@ -25,7 +25,9 @@ WORKDIR /app
 
 COPY --from=builder /app/users-ms/target/users-ms-0.0.1-SNAPSHOT.jar .
 
-EXPOSE 8001
+ENV PORT 8000
+
+EXPOSE $PORT
 
 ## entry point now is pointing to container folder with the compile
 ##ENTRYPOINT ["java", "-jar", "./target/users-ms-0.0.1-SNAPSHOT.jar"]
