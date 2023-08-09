@@ -8,7 +8,7 @@ import java.util.List;
 
 //se debe poner el nombre del microservicio que se va a consumir
 // el nombre debe ser identico al que se encuentra en el properties del servicio.
-@FeignClient(name="users-ms", url="localhost:8001")
+@FeignClient(name="users-ms", url="users-ms:8001")
 public interface UserClientRest {
     @GetMapping("/{id}")
     User detail(@PathVariable Long id);
