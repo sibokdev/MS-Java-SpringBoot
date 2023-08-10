@@ -1,0 +1,56 @@
+version: "3.8"
+services :
+  mysql8:
+    image: mysql:8
+    ports:
+      - "3307:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: admin1234
+      MYSQL_DATABASE: users_ms
+    volumes:
+      - data-mysql:/var/lib/mysql8/data
+    restart: always
+    networks:
+      - spring
+  postgres14:
+    image: postgres:14-alpine
+    ports:
+      - "5532:5532"
+    environment:
+      POSTGRES_PASSWORD: admin1234
+      POSTGRES_DB: courses_ms
+    volumes:
+      - data-postgres:/var/lib/postgresql/data
+    restart: always
+    networks:
+      - spring
+  users-ms:
+    image: users
+    ports:
+      - "8001:8001"
+    env_file:
+      - ./users-ms/.env
+    networks:
+      - spring
+    depends_on:
+      - mysql8
+    restart: always
+  courses-ms:
+    image: courses
+    ports:
+      - "8002:8002"
+    env_file:
+      - ./courses-ms/.env
+    networks:
+      - spring
+    depends_on:
+      - postgres14
+    restart: always
+## define volumes to be used above
+volumes:
+  data-mysql:
+  data-postgres:
+
+## define network to be used above
+networks:
+  spring:
