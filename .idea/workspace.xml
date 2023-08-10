@@ -6,7 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="3de976a8-4746-4ff3-b505-bb00a99187c2" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/courses-ms/.env" beforeDir="false" afterPath="$PROJECT_DIR$/courses-ms/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/courses-ms/src/main/java/org/sibokdev/springcloud/ms/courses/coursesms/integration/clients/UserClientRest.java" beforeDir="false" afterPath="$PROJECT_DIR$/courses-ms/src/main/java/org/sibokdev/springcloud/ms/courses/coursesms/integration/clients/UserClientRest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/courses-ms/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/courses-ms/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users-ms/.env" beforeDir="false" afterPath="$PROJECT_DIR$/users-ms/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users-ms/src/main/java/org/sibokdev/springcloud/ms/users/integration/clients/CourseClientRest.java" beforeDir="false" afterPath="$PROJECT_DIR$/users-ms/src/main/java/org/sibokdev/springcloud/ms/users/integration/clients/CourseClientRest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/users-ms/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/users-ms/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -50,6 +54,7 @@
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/courses-ms" />
+      <recent name="$PROJECT_DIR$/users-ms" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="org.sibokdev.springcloud.ms.courses.coursesms.models" />
