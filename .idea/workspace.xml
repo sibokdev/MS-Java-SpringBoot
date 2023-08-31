@@ -6,10 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="3de976a8-4746-4ff3-b505-bb00a99187c2" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/courses-ms/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/courses-ms/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/deployment-mysql.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/deployment-mysql.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users-ms/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/users-ms/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users-ms/src/main/java/org/sibokdev/springcloud/ms/users/controllers/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/users-ms/src/main/java/org/sibokdev/springcloud/ms/users/controllers/UserController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
