@@ -28,7 +28,7 @@ ARG MS_NAME=courses-ms
 ARG TARGET_FOLDER=/app/$MS_NAME/target
 COPY --from=builder $TARGET_FOLDER/courses-ms-0.0.1-SNAPSHOT.jar .
 
-EXPOSE 8001
+EXPOSE 8002
 
 ## entry point now is pointing to container folder with the compile
 ##ENTRYPOINT ["java", "-jar", "./target/users-ms-0.0.1-SNAPSHOT.jar"]

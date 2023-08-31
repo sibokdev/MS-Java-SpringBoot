@@ -29,7 +29,7 @@ ARG TARGET_FOLDER=/app/$MS_NAME/target/
 
 COPY --from=builder $TARGET_FOLDER/users-ms-0.0.1-SNAPSHOT.jar .
 
-ENV PORT 8000
+ENV PORT 8001
 
 EXPOSE $PORT
 

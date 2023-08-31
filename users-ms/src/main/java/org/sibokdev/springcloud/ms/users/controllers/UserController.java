@@ -3,6 +3,8 @@ package org.sibokdev.springcloud.ms.users.controllers;
 import org.sibokdev.springcloud.ms.users.models.entity.User;
 import org.sibokdev.springcloud.ms.users.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.BindingResult;
@@ -16,6 +18,13 @@ public class UserController {
     @Autowired
     UserService userService;
 
+    @Autowired
+    ApplicationContext context;
+
+    @GetMapping("/crash")
+    public void crash(){
+        ((ConfigurableApplicationContext)context).close();
+    }
     @GetMapping
     public List<User> list(){
         return userService.list();
