@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: courses-ms
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: courses-ms
+  template:
+    metadata:
+      labels:
+        app: courses-ms
+    spec:
+      containers:
+        - image: alfred0823/courses:latest
+          name: courses
+          ports:
+          - containerPort: 8002
